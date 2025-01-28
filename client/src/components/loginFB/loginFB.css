@@ -1,0 +1,93 @@
+.login-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.signintitle {
+  color: rgb(0, 0, 0);
+  margin-bottom: 2rem;
+  font-size: 2rem;
+}
+
+.user-type-selection {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.user-type-buttons {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  width: 100%;
+  justify-content: center;
+}
+
+.user-type-button {
+  padding: 0.8rem 1.5rem;
+  border: 2px solid #1877f2;
+  border-radius: 4px;
+  background: white;
+  color: #1877f2;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.user-type-button.selected {
+  background: #1877f2;
+  color: white;
+}
+
+.user-type-button:hover {
+  background: #1877f2;
+  color: white;
+}
+
+.facebook-login-button {
+  width: 100%;
+  padding: 12px 24px;
+  background-color: #1877f2;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.facebook-login-button:hover {
+  background-color: #166fe5;
+}
+
+.error-message {
+  color: #dc3545;
+  background-color: #f8d7da;
+  border: 1px solid #f5c6cb;
+  padding: 0.75rem 1.25rem;
+  margin-bottom: 1rem;
+  border-radius: 4px;
+  width: 100%;
+  text-align: center;
+}
+
+@media (max-width: 480px) {
+  .user-type-buttons {
+    flex-direction: column;
+  }
+  
+  .user-type-button {
+    width: 100%;
+  }
+}

@@ -1,0 +1,143 @@
+.SeekerMCP-container{
+    display: flex;
+    flex-direction: row;
+    margin-top: 80px;
+    min-height: 80vh;
+}
+
+.SeekerMCP--sidebar{
+    background-color: #f7f7fa;;
+}
+
+.SeekerMCP-rightcontainer{
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    padding: 30px 30px 30px 30px;
+}
+
+/*.SeekerMCP-rightcontainer h1{
+    text-align: center;
+}*/
+
+.SeekerMCP-rightcontainer-content{
+    display: flex;
+    flex-direction: row;
+
+}
+
+/*.SeekerMCP-profile-image-div{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-left: 200px;
+}*/
+
+
+.SeekerMCP-profile-image{
+    width: 200px;
+    height: 250px;
+    border-radius: 15px;
+    object-fit: cover;
+}
+
+.SeekerMCP-right-form{
+    flex-grow: 1;
+    padding-right: 50px;
+    padding-left: 100px;
+}
+
+.SeekerMCP-minutes{
+    height: 40px;
+}
+
+.SeekerMCP-disc{
+    height: 80px;
+    width: 700px;
+}
+
+.SeekerMCP-firstMessage{
+    height: 80px;
+    width: 700px;
+}
+
+.SeekerMCP-permin-rate-message{
+    color: green;
+}
+
+
+.SeekerMCP-pay-sendMessage {
+    margin-top: 50px;
+    width: 300px;
+    margin-bottom: 40px;
+    position:relative;
+    padding: 10px 20px;
+    border-radius: 7px;
+    border: 1px solid rgb(0, 0, 0);
+    font-size: 14px;
+    font-family: "Roboto";
+    font-weight: 600;
+    background-color: #ff0000;
+    color: rgb(247, 247, 247);
+    overflow: hidden;
+    box-shadow: 0 0 0 0 transparent;
+    -webkit-transition: all 0.2s ease-in;
+    -moz-transition: all 0.2s ease-in;
+    transition: all 0.2s ease-in;
+  }
+  
+.SeekerMCP-pay-sendMessage:hover {
+    background: rgb(247, 130, 47);
+    box-shadow: 0 0 30px 5px rgb(255, 106, 0);
+    -webkit-transition: all 0.2s ease-out;
+    -moz-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
+  }
+  
+.SeekerMCP-pay-sendMessage:hover::before {
+    -webkit-animation: sh02 0.5s 0s linear;
+    -moz-animation: sh02 0.5s 0s linear;
+    animation: sh02 0.5s 0s linear;
+  }
+  
+.SeekerMCP-pay-sendMessage::before {
+    content: '';
+    display: block;
+    width: 0px;
+    height: 86%;
+    position: absolute;
+    top: 7%;
+    left: 0%;
+    opacity: 0;
+    background: #fff;
+    box-shadow: 0 0 50px 30px #fff;
+    -webkit-transform: skewX(-20deg);
+    -moz-transform: skewX(-20deg);
+    -ms-transform: skewX(-20deg);
+    -o-transform: skewX(-20deg);
+    transform: skewX(-20deg);
+  }
+  
+  @keyframes sh02 {
+    from {
+      opacity: 0;
+      left: 0%;
+    }
+  
+    50% {
+      opacity: 1;
+    }
+  
+    to {
+      opacity: 0;
+      left: 100%;
+    }
+  }
+  
+.SeekerMCP-pay-sendMessage:active {
+    box-shadow: 0 0 0 0 transparent;
+    -webkit-transition: box-shadow 0.2s ease-in;
+    -moz-transition: box-shadow 0.2s ease-in;
+    transition: box-shadow 0.2s ease-in;
+  }
+  

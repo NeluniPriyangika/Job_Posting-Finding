@@ -1,0 +1,233 @@
+.CompanyChat-container {
+    display: flex;
+    flex-direction: row;
+    margin-top: 70px;
+    min-height: 80vh;
+}
+
+.CompanyChat--sidebar {
+    background-color: #f7f7fa;
+}
+
+.CompanyChat-Middlecontainer {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    padding: 30px 0px 30px 30px;
+}
+
+.CompanyChat-Middlecontainer-top {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 10px;
+    justify-content: space-between;
+    margin: 0px 30px 0px 0px;
+}
+
+.CompanyChat-Middlecontainer-top1{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.CompanyChat-Middlecontainer-top2{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+/* Timer Countdown Text */
+.Company-timer {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    background-color: antiquewhite;
+    padding: 10px;
+    border-radius: 5px;
+    margin-right: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+}
+
+/* Start/End Timer Button */
+.Company-timer-controller {
+    background-color: #4caf50;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.Company-timer-controller:hover {
+    background-color: #45a049;
+}
+
+.Company-timer-controller.stop {
+    background-color: #e53935; /* Red for the end timer button */
+}
+
+.Company-timer-controller.stop:hover {
+    background-color: #d32f2f;
+}
+
+
+.CompanyChat-Middlecontainer-proPick {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 20px;
+}
+
+.CompanyChat-Status {
+    background-color: green;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin-left: 20px;
+}
+
+/*.CompanyChat-Middlecontainer-bottom {
+    background-color: blanchedalmond;
+    flex-grow: 1;
+    padding: 15px;
+    overflow-y: auto;
+}*/
+
+.CompanyChat-Middlecontainer-bottom {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.CompanyChat-chatwindow {
+    flex-grow: 1;
+    overflow-y: scroll;
+    padding: 10px;
+}
+
+.chat-message {
+    padding: 5px 10px;
+    margin: 5px 0;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+}
+
+.chat-input {
+    display: flex;
+    margin-top: 10px;
+}
+
+.chat-input input {
+    flex-grow: 1;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.chat-input button {
+    padding: 10px 20px;
+    margin-left: 10px;
+    margin-right: 20px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.chat-input button:hover {
+    background-color: #45a049;
+}
+
+.CompanyChat-RightContainer {
+    width: 240px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.CompanyChat-RightContainer h3{
+    text-decoration: underline;
+}
+
+.CompanyChat-chat-history-container{
+    display: flex;
+    height: 600px;
+    width: 230px;
+    flex-direction: column;
+      border-radius: 6px;
+      color: #000000;
+      background: rgb(255, 255, 255,0.5);
+      padding: 0.1rem;
+      box-shadow: 0 0 1rem rgb(106, 76, 31) inset;
+      overflow-x: auto;
+      position: relative;
+    
+      
+      &::-webkit-scrollbar {
+        display: none;
+      }
+  }
+  
+  .CompanyChat-chat-history{
+    display: flex;
+    flex: 1 0 100px;
+    flex-direction: row;
+    align-items: center;
+    box-shadow: 0 1px 1rem -4px #000;
+    background: #ffffff;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    overflow: hidden;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 250ms ease-in-out;
+      
+    img {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        object-fit: center;
+        margin-left: 10px;
+    }
+      
+    &:hover {
+        box-shadow: 0 4px 1rem -4px #000;
+        transform: translateY(-3px);
+    }
+  }
+  
+  .CompanyChat-chat-history-content2{
+    width: 150px;
+  }
+  
+  .CompanyChat-chat-history-desc{
+    font-size: 12px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical; 
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding-left: 5px;
+    padding-right: 5px;
+    text-align: justify;
+  }
+  
+  .CompanyChat-chat-history-content2 h6{
+    font-size: 12px;
+    padding-left: 5px;
+    padding-right: 5px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-transform: uppercase;
+  }
+  
+

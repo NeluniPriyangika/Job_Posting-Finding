@@ -1,0 +1,278 @@
+.company-profile-update-main{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    background:  linear-gradient(
+      rgba(255, 217, 0, 0),
+      rgba(255, 217, 0, 0)
+    ),  url("../../assets/registerpageBG.jpg") no-repeat;
+    min-height: 150vh;
+    background-size: cover;
+    background-position:center;
+}
+
+.company-profile-update-container{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: center;
+  height: 900px;
+}
+
+.company-profile-update-tipstobuildprofile{
+  background: rgba(255, 255, 255, 0.5);
+  width: 300px;
+  height: 750px;
+  margin-top: 100px;
+  margin-right: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid rgb(0, 0, 0);
+  border-radius: 10px;
+  overflow-x: auto;
+  position: relative;
+
+  &::-webkit-scrollbar {
+      display: none;
+  }
+
+}
+
+.company-profile-update-tipstobuildprofile-tittle{
+  margin-top: 50px;
+  text-decoration: underline;
+  margin-left: 10px;
+  text-align: center;
+}
+
+.company-profile-update-tipstobuildprofile-list{
+  text-align: justify;
+  margin-right: 40px;  
+  font-size: 15px;
+  margin-top: 30px;
+
+}
+
+.company-profile-update-tipstobuildprofile-list-item{
+  margin-bottom: 15px;
+}
+
+.company-profile-update-advantagesasCompany{
+  background: rgba(255, 255, 255, 0.5);
+  width: 300px;
+  margin-top: 100px;
+  margin-left: 40px;
+  text-align: center;
+  border: 1px solid rgb(0, 0, 0);
+  border-radius: 10px;
+  height: 750px;
+  overflow-x: auto;
+  position: relative;
+
+  &::-webkit-scrollbar {
+      display: none;
+  }
+}
+
+.company-profile-update-advantagesasCompany-tittle{
+  margin-top: 50px;
+  text-decoration: underline;
+  text-align: center;
+}
+
+.company-profile-update-advantagesasCompany-tittle-list-item{
+  list-style-type:none;
+  font-size: 15px;
+  text-align: center;
+  margin-right: 40px;
+}
+
+.company-profile-update-form-container{
+    background: rgba(255, 255, 255, 0.9);
+    margin-top: 100px;
+    width: 650px;
+    height:auto ;
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 10px;
+    overflow-x: auto;
+  position: relative;
+    
+
+  &::-webkit-scrollbar {
+      display: none;
+  }
+}
+
+.company-profile-update-form-tittle{
+    margin-top: 50px;
+    text-decoration: underline;
+}
+
+.company-profile-update-firstinput-div{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  font-family: 'Lucida Sans';
+}
+
+.company-updateform-input1{
+    width: 500px;
+    height: 40px;
+    margin-bottom: 40px;
+    font-family: 'Lucida Sans';
+}
+
+.company-updateform-textarea{
+  width: 500px;
+  height: 80px;
+  margin-bottom: 40px;
+  font-family: 'Lucida Sans';
+}
+
+.company-profile-update-perminutesrate{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.company-updateform-ratefor-amount{
+  width: 250px;
+  height: 40px;
+  margin-right: 20px;
+  font-family: 'Lucida Sans';
+}
+
+.company-updateform-currency{
+    height: 40px;
+    margin-top: 20px;
+}
+
+.company-updateform-uploadpic{
+  background-color: rgb(255, 255, 255);
+  font-family: 'Lucida Sans';
+  width: 350px;
+
+  &::-webkit-file-upload-button{
+    color: rgb(0, 0, 0);
+    font-family: 'Lucida Sans';
+    height: 40px;
+    background-color: #fff;
+    margin-right: 40px;
+    width: 100px;
+  }
+}
+
+.company-updateform-timezone{
+  border-color: black;
+  width: 500px;
+}
+
+.company-available-days{
+  margin-top: 40px;
+}
+
+.company-available-days-item{
+  margin-bottom: 10px;
+  text-align: start;
+  font-family: 'Lucida Sans';
+  font-size: 12px; 
+}
+
+.company-updateform-hours{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+.company-updateform-hours-start{
+  height: 30px;
+  margin-right: 20px;
+}
+
+.company-updateform-hours-end{
+  height: 30px;
+  margin-left: 20px;
+}
+
+.Company-profileUpdatebutton {
+    margin-top: 20px;
+    margin-bottom: 40px;
+    position:relative;
+    padding: 10px 20px;
+    border-radius: 7px;
+    border: 1px solid rgb(255, 106, 0);
+    font-size: 14px;
+    font-family: "Roboto";
+    font-weight: 600;
+    background: transparent;
+    color: rgb(5, 5, 5);
+    overflow: hidden;
+    box-shadow: 0 0 0 0 transparent;
+    -webkit-transition: all 0.2s ease-in;
+    -moz-transition: all 0.2s ease-in;
+    transition: all 0.2s ease-in;
+  }
+  
+.Company-profileUpdatebutton:hover {
+    background: rgb(247, 130, 47);
+    box-shadow: 0 0 30px 5px rgb(255, 106, 0);
+    -webkit-transition: all 0.2s ease-out;
+    -moz-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
+  }
+  
+.Company-profileUpdatebutton:hover::before {
+    -webkit-animation: sh02 0.5s 0s linear;
+    -moz-animation: sh02 0.5s 0s linear;
+    animation: sh02 0.5s 0s linear;
+  }
+  
+.Company-profileUpdatebutton::before {
+    content: '';
+    display: block;
+    width: 0px;
+    height: 86%;
+    position: absolute;
+    top: 7%;
+    left: 0%;
+    opacity: 0;
+    background: #fff;
+    box-shadow: 0 0 50px 30px #fff;
+    -webkit-transform: skewX(-20deg);
+    -moz-transform: skewX(-20deg);
+    -ms-transform: skewX(-20deg);
+    -o-transform: skewX(-20deg);
+    transform: skewX(-20deg);
+  }
+  
+  @keyframes sh02 {
+    from {
+      opacity: 0;
+      left: 0%;
+    }
+  
+    50% {
+      opacity: 1;
+    }
+  
+    to {
+      opacity: 0;
+      left: 100%;
+    }
+  }
+  
+.Company-profileUpdatebutton:active {
+    box-shadow: 0 0 0 0 transparent;
+    -webkit-transition: box-shadow 0.2s ease-in;
+    -moz-transition: box-shadow 0.2s ease-in;
+    transition: box-shadow 0.2s ease-in;
+  }
+  

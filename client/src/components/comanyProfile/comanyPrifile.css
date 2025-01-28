@@ -1,0 +1,198 @@
+.companyProfile-main{
+    
+}
+
+
+.companyprofile-container{
+ min-height: 100vh;
+ display: flex;
+ flex-direction: row;   
+ margin-top: 75px;
+ 
+}
+
+.companyprofile-sidebar{
+    background-color: #f7f7fa;
+}
+
+.companyprofile-rightcontainer{
+    display: flex;
+    flex-direction: column;
+    padding: 30px 30px 30px 30px;
+    flex-grow: 1;
+
+}
+
+.companyprofile-rightcontainer-top{
+    display: flex;
+    flex-direction: row;  
+}
+
+.companyprofile-userdetails1{
+    width: 800px;
+}
+
+.companyprofile-header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.companyprofile-onlinestatus{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: green;
+    margin-left: 20px;
+}
+
+.companyprofile-rating{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 50px;
+}
+
+.companyprofile-profexperiance-cont{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 50px;
+}
+
+.companyprofile-bio{
+    text-align: justify;
+}
+
+.companyprofile-userdetails2{
+    flex-grow: 1;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.companyprofile-image{
+    width: 200px;
+    height: 250px;
+    border-radius: 15px;
+    object-fit: cover;
+}
+
+.companyprofile-messagingbutton {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #FF6347; /* Tomato color for the button */
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease; /* Smooth transition for hover and active states */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+}
+
+.companyprofile-messagingbutton:hover {
+    background-color: #FF4500; /* Darker shade on hover */
+    transform: translateY(-3px); /* Button rises slightly when hovered */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2); /* Stronger shadow effect */
+}
+
+.companyprofile-messagingbutton:active {
+    background-color: #FF6347; /* Original color for the click effect */
+    transform: translateY(1px); /* Button lowers slightly when clicked */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Weaker shadow on click */
+}
+
+.companyprofile-messagingbutton:focus {
+    outline: none; /* Remove default browser outline on focus */
+}
+
+
+.companyprofile-rightcontainer-bottom{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+.companyprofile-seekerReviews-container{
+    display: flex;
+    width: 1200px;
+    height: 250px;
+    background-color: #d0cfcf;
+    flex-direction: row;
+      border-radius: 6px;
+      color: #000000;
+      background: rgb(255, 255, 255,0.5);
+      padding: 1rem;
+      box-shadow: 0 0 1rem rgb(106, 76, 31) inset;
+      overflow-x: auto;
+      position: relative;
+    
+      
+      &::-webkit-scrollbar {
+        display: none;
+      }
+  }
+  
+  .companyprofile-seekerReviews{
+    display: flex;
+    flex: 1 0 300px;
+    flex-direction: row;
+    align-items: center;
+    box-shadow: 0 1px 1rem -4px #000;
+    background: #ffffff;
+    margin-bottom: 1rem;
+    overflow: hidden;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 250ms ease-in-out;
+    margin-right: 20px;
+    
+      
+    img {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        object-fit: center;
+        margin-left: 10px;
+    }
+      
+    &:hover {
+        box-shadow: 0 4px 1rem -4px #000;
+        transform: translateY(-3px);
+    }
+  }
+  
+  .companyprofile-seekerReviews-content2{
+    width: 200px;
+  }
+  
+  .companyprofile-seekerReviews-desc{
+    font-size: 12px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical; 
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding-left: 10px;
+    padding-right: 10px;
+    text-align: justify;
+  }
+  
+  .companyprofile-seekerReviews-content2 h2{
+    font-size: 16px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-transform: uppercase;
+  }
+  
+  .companyprofile-seekerReviews-rating{
+    padding-left: 10px;
+    padding-right: 10px;
+  }

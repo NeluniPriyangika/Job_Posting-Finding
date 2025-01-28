@@ -1,0 +1,146 @@
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px 0px;
+    background: #232323;
+    transition: background-color 0.1s ease;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.header.scrolled {
+  background-color: #232323;
+}
+
+.logo-navbar {
+    width: 90px;
+    height: 50px;
+    margin-left: 100px;
+}
+
+.navicons {
+    color: rgb(255, 255, 255);
+    margin-right: 100px;
+    align-content: center;
+}
+
+.navlink {
+    position: relative;
+    margin-left: 30px;
+    color: rgb(255, 255, 255);
+    font-weight: 500;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-decoration: none; /* used to remove underline */
+}
+
+.navlink::before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: rgb(255, 255, 255);
+    z-index: 10; 
+    transition: width 0.3s ease;
+}
+
+.navlink:hover::before {
+    width: 100%; 
+}
+
+.joinusButton {
+    position: relative;
+    font-size: 17px;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 0.3em 1em;
+    display: inline-block;
+    cursor: pointer;
+    border-radius: 6em;
+    transition: all 0.2s;
+    border: none;
+    font-weight: 500;
+    color: black;
+    background-color: rgb(255, 106, 0);
+  }
+  
+  .joinusButton:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  .joinusButton:active {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .joinusButton::after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all 0.4s;
+  }
+  
+  .joinusButton::after {
+    background-color: #fff;
+  }
+  
+  .joinusButton:hover::after {
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0;
+  }
+  
+
+.navbaricon {
+    margin-left: 30px;
+    width: 20px;
+    height: 20px;
+    color: rgb(255, 255, 255);
+}
+
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .popup-content {
+    background: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 5px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 30px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    color: rgb(0, 0, 0);
+  }
