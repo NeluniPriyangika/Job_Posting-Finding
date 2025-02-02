@@ -2,7 +2,7 @@ import React from 'react'
 import { useNavigate } from 'react-router-dom';
 import './payment.css'
 import Navbar2 from '../navbar2/Navbar2';
-import SeekerSideBar from '../seekerSideBar/SeekerSideBar';
+import JobSeekerSideBar from '../jobseekerSideBar/JobSeekerSideBar';
 import Footer from '../footer/Footer'
 import Company2 from '../../assets/Company2.jpg'
 
@@ -15,7 +15,7 @@ function Payment() {
       <Navbar2 />
       <div className="pyment-container">
         <div className="pyment-container-right">
-          <SeekerSideBar /> 
+          <JobSeekerSideBar /> 
         </div>
         <div className="pyment-container-left">
             <div className="pyment-container-left-longtext">
@@ -34,7 +34,7 @@ function Payment() {
                 </div>
                 
             </div>
-            <button className='paymet-sendmessage-button' onClick={()=>navigate("/seeker-chat")}>Send Message</button>
+            <button className='paymet-sendmessage-button' onClick={()=>navigate("/jobSeeker-chat")}>Send Message</button>
         </div>
       </div>
       <Footer />

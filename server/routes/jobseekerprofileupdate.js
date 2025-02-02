@@ -16,7 +16,7 @@ const storage = multer.diskStorage({
 
 const upload = multer({ storage: storage });
 
-router.post('/update-seeker-profile/:userId', upload.single('profilePhoto'), async (req, res) => {
+router.post('/update-jobseeker-profile/:userId', upload.single('profilePhoto'), async (req, res) => {
   try {
     const { userId } = req.params;
 

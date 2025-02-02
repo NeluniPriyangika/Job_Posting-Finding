@@ -1,8 +1,8 @@
 import React, { useEffect, useState, useCallback } from 'react';
 import { useTimer } from 'react-timer-hook';
-import './seekerChat.css';
+import './jobseekerChat.css';
 import Navbar2 from '../navbar2/Navbar2';
-import SeekerSideBar from '../seekerSideBar/SeekerSideBar';
+import JobSeekerSideBar from '../jobseekerSideBar/JobSeekerSideBar';
 import Footer from '../footer/Footer';
 import Company2 from '../../assets/Company2.jpg';
 import io from 'socket.io-client';
@@ -21,7 +21,7 @@ const useChatSession = (userId, companyId) => {
   const initializeSession = useCallback(async () => {
     try {
       const response = await axios.post(`${API_URL}/session/initialize`, {
-        seekerId: userId,
+        jobSeekerId: userId,
         companyId
       });
       setSession(response.data);
@@ -71,7 +71,7 @@ const useChatMessages = (userId, socket) => {
   return { messages, setMessages, sendMessage, error };
 };
 
-function SeekerChat() {
+function JobSeekerChat() {
   const [currentUser, setCurrentUser] = useState(null);
   const [currentCompany, setCurrentCompany] = useState(null);
   const [socket, setSocket] = useState(null);
@@ -185,40 +185,40 @@ function SeekerChat() {
     return <div>Loading...</div>;
   }
 
-  if (!currentUser || currentUser.userType !== 'seeker') {
-    return <div>Access denied. Only seekers can access this page.</div>;
+  if (!currentUser || currentUser.userType !== 'jobSeeker') {
+    return <div>Access denied. Only jobSeekers can access this page.</div>;
   }
 
   return (
-    <div className="SeekerChat-main">
+    <div className="JobSeekerChat-main">
       <Navbar2 />
-      <div className="SeekerChat-container">
-        <div className="SeekerChat--sidebar">
-          <SeekerSideBar />
+      <div className="JobSeekerChat-container">
+        <div className="JobSeekerChat--sidebar">
+          <JobSeekerSideBar />
         </div>
         <hr />
-        <div className="SeekerChat-Middlecontainer">
-          <div className="SeekerChat-Middlecontainer-top">
-            <div className="SeekerChat-Middlecontainer-top1">
+        <div className="JobSeekerChat-Middlecontainer">
+          <div className="JobSeekerChat-Middlecontainer-top">
+            <div className="JobSeekerChat-Middlecontainer-top1">
               <img 
-                className="SeekerChat-Middlecontainer-proPick" 
+                className="JobSeekerChat-Middlecontainer-proPick" 
                 src={currentCompany?.profilePhotoUrl || Company2} 
                 alt="Company" 
               />
               <h2>{currentCompany?.name || 'Select an Company'}</h2>
-              <div className="SeekerChat-Status">
+              <div className="JobSeekerChat-Status">
                 {session ? 'Active' : 'Inactive'}
               </div>
             </div>
-            <div className="SeekerChat-Middlecontainer-top2">
-              <div className="Seeker-timer">
+            <div className="JobSeekerChat-Middlecontainer-top2">
+              <div className="JobSeeker-timer">
                 {`${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`}
               </div>
             </div>
           </div>
           <hr />
-          <div className="SeekerChat-Middlecontainer-bottom">
-            <div className="SeekerChat-chatwindow">
+          <div className="JobSeekerChat-Middlecontainer-bottom">
+            <div className="JobSeekerChat-chatwindow">
               {messages.map((message, index) => (
                 <MessageBox
                   key={index}
@@ -249,23 +249,23 @@ function SeekerChat() {
           </div>
         </div>
         <hr />
-        <div className="SeekerChat-RightContainer">
+        <div className="JobSeekerChat-RightContainer">
           <h3>Chat History</h3>
-          <div className="SeekerChat-chat-history-content">
+          <div className="JobSeekerChat-chat-history-content">
             {chatHistory.map((session, index) => (
-              <div key={index} className="SeekerChat-chat-history">
-                <div className="SeekerChat-chat-history-content1">
+              <div key={index} className="JobSeekerChat-chat-history">
+                <div className="JobSeekerChat-chat-history-content1">
                   <img 
                     src={session.company.profilePhotoUrl || Company2} 
                     alt={session.company.name} 
                   />
                 </div>
-                <div className="SeekerChat-chat-history-content2">
+                <div className="JobSeekerChat-chat-history-content2">
                   <h6>{session.company.name}</h6>
-                  <p className="SeekerChat-chat-history-desc">
+                  <p className="JobSeekerChat-chat-history-desc">
                     Status: {session.status}
                   </p>
-                  <p className="SeekerChat-chat-history-desc">
+                  <p className="JobSeekerChat-chat-history-desc">
                     Duration: {session.duration ? `${Math.floor(session.duration / 60)} minutes` : 'Ongoing'}
                   </p>
                 </div>
@@ -279,4 +279,4 @@ function SeekerChat() {
   );
 }
 
-export default SeekerChat;
+export default JobSeekerChat;

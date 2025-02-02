@@ -47,9 +47,9 @@ router.post('/google-login', async (req, res) => {
     // Determine redirect path
     let redirectTo;
     if (isNewUser || !user.profileCompleted) {
-      redirectTo = userType === 'company' ? `/company-update-profile/${sub}` : `/seeker-update-profile/${sub}`;
+      redirectTo = userType === 'company' ? `/company-update-profile/${sub}` : `/jobseeker-update-profile/${sub}`;
     } else {
-      redirectTo = user.userType === 'company' ? `/company-profile/${user.userId}` : `/seeker-profile/${user.userId}`;
+      redirectTo = user.userType === 'company' ? `/company-profile/${user.userId}` : `/jobseeker-profile/${user.userId}`;
     }
 
     res.json({ user, token, redirectTo, isNewUser });

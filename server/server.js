@@ -58,7 +58,7 @@ mongoose.connect(process.env.MONGODB_URI, {
 io.on('connection', (socket) => {
   console.log('User connected:', socket.id);
 
-  // Handle joining both company and seeker chat rooms
+  // Handle joining both company and jobSeeker chat rooms
   socket.on('join', (sessionId) => {
     socket.join(sessionId);
     console.log(`Socket ${socket.id} joined session ${sessionId}`);
@@ -72,7 +72,7 @@ io.on('connection', (socket) => {
     socket.to(data.sessionId).emit('stopTyping', data.user);
   });
 
-  // Handle messages for both company and seeker chats
+  // Handle messages for both company and jobSeeker chats
   socket.on('message', async (data) => {
     try {
       const { sessionId, message } = data;
@@ -91,24 +91,24 @@ io.on('connection', (socket) => {
 const authRoutes = require('./routes/auth');
 const fbAuthRoutes = require('./routes/fb-auth');
 const profileUpdateRoutes = require('./routes/profileupdate');
-const seekerProfileUpdateRoutes = require('./routes/seekerprofileupdate');
+const jobSeekerProfileUpdateRoutes = require('./routes/jobseekerprofileupdate');
 const chatRoutes = require('./routes/chatRoutes');
 //const companyChatRoutes = require('./routes/adviorChatRoute');
-//const seekerChatRoutes = require('./routes/seekerChatRoute');
-const companyProfileRoutes = require('./routes/companyprofile');
-const seekerProfileRoutes = require('./routes/seekerprofile');
+//const jobSeekerChatRoutes = require('./routes/jobSeekerChatRoute');
+const companyProfileRoutes = require('./routes/advisorprofile');
+const jobSeekerProfileRoutes = require('./routes/jobseekerprofile');
 const companyRoutes = require('./routes/getCompanies');
 
 // Apply routes
 app.use('/api/auth', authRoutes);
 app.use('/api/auth', fbAuthRoutes);
 app.use('/api', profileUpdateRoutes);
-app.use('/api', seekerProfileUpdateRoutes);
+app.use('/api', jobSeekerProfileUpdateRoutes);
 app.use('/api/chat', chatRoutes); // Changed to /api/chat for consistency
 //app.use('/api/company-chat', companyChatRoutes); // Changed to /api/company-chat
-//app.use('/api/seeker-chat', seekerChatRoutes); // Add this line
+//app.use('/api/jobSeeker-chat', jobSeekerChatRoutes); // Add this line
 app.use('/api', companyProfileRoutes);
-app.use('/api', seekerProfileRoutes);
+app.use('/api', jobSeekerProfileRoutes);
 app.use('/api', companyRoutes);
 
 

@@ -1,10 +1,10 @@
 import React from 'react'
-import SeekerChat from '../../components/seekerChat/SeekerChat'
+import JobSeekerChat from '../../components/jobseekerChat/JobSeekerChat'
 
 function SeekerChatPage() {
   return (
     <div>
-      <SeekerChat />
+      <JobSeekerChat/>
     </div>
   )
 }

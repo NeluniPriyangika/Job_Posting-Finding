@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate, useParams} from 'react-router-dom';
-import './seekerPrifile.css';
+import './jobseekerPrifile.css';
 import Navbar2 from '../navbar2/Navbar2';
 import Footer from '../footer/Footer';
-import SeekerSideBar from '../seekerSideBar/SeekerSideBar';
+import SeekerSideBar from '../jobseekerSideBar/JobSeekerSideBar';
 import ReadOnlyRating from '../readOnlyRating/ReadOnlyRating';
 import Company2 from '../../assets/Company2.jpg';
 
@@ -62,7 +62,7 @@ function SeekerProfile() {
 
         console.log('Fetching company data for userId:', userId); // Debug log
 
-        const response = await fetch(`http://localhost:5000/api/seeker-profile/${userId}`,
+        const response = await fetch(`http://localhost:5000/api/jobseeker-profile/${userId}`,
           { method: 'GET',
             headers: {
             'Content-Type': 'application/json',

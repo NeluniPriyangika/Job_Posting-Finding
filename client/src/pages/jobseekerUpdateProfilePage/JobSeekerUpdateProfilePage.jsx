@@ -1,10 +1,10 @@
 import React from 'react'
-import SeekerUpdateProfile from '../../components/seekerUpdateProfile/SeekerUpdateProfile'
+import JobSeekerUpdateProfile from '../../components/jobseekerUpdateProfile/JobSeekerUpdateProfile'
 
 function SeekerUpdateProfilePage() {
   return (
     <div>
-      <SeekerUpdateProfile />
+      <JobSeekerUpdateProfile/>
     </div>
   )
 }

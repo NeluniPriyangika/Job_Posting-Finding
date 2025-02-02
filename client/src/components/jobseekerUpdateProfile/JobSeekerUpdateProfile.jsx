@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import './seekerUpdateProfile.css';
+import './jobseekerUpdateProfile.css';
 import { useNavigate } from 'react-router-dom';
 import 'react-datepicker/dist/react-datepicker.css';
 import DatePicker from 'react-datepicker';
@@ -128,13 +128,13 @@ const SeekerUpdateProfile = () => {
     }  
 
     try {
-      const res = await fetch(`http://localhost:5000/api/update-seeker-profile/${userId}`, {
+      const res = await fetch(`http://localhost:5000/api/update-jobseeker-profile/${userId}`, {
         method: 'POST',
         body: formData,
       });
       const data = await res.json();
       if (data.success) {
-        navigate(`/seeker-profile/${userId}`);
+        navigate(`/jobseeker-profile/${userId}`);
       } else {
         // Handle error
         alert(`Profile update failed: ${data.error || 'An unknown error occurred.'}`);

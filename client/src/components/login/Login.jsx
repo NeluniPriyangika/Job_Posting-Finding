@@ -101,7 +101,7 @@ const Login = () => {
           onClick={() => setUserType('seeker')}
         >
           <img className="googleSignInImag" src={GoogleLogo} alt="Google Logo" />
-          Sign in as Seeker
+          Sign in as Jobs Seeker
         </button>
       </div>
       {userType && (

@@ -1,10 +1,10 @@
 import React from 'react'
-import SeekerHome from '../../components/seekerHome/SeekerHome'
+import JobSeekerHome from '../../components/jobseekerHome/JobSeekerHome'
 
 function SeekerHomePage() {
   return (
     <div>
-      <SeekerHome />
+      <JobSeekerHome />
     </div>
   )
 }

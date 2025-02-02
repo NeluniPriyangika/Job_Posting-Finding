@@ -8,25 +8,25 @@ import ReadOnlyRating from '../readOnlyRating/ReadOnlyRating';
 import Company1 from '../../assets/Company1.jpg';
 
 
-const SeekerReviews = (props) => (
-  <div className="companyprofile-seekerReviews">
-    <div className='companyprofile-seekerReviews-content1'>
+const JobSeekerReviews = (props) => (
+  <div className="companyprofile-jobSeekerReviews">
+    <div className='companyprofile-jobSeekerReviews-content1'>
       <img src={ props.imgUrl } 
       alt={ props.alt || 'Image' } />
     </div>
-    <div className="companyprofile-seekerReviews-content2">
+    <div className="companyprofile-jobSeekerReviews-content2">
       <h2>{ props.title }</h2>
-      <div className='companyprofile-seekerReviews-rating'> {props.homeRating}</div>
-      <p className='companyprofile-seekerReviews-desc'>"{props.subtitle}</p>
+      <div className='companyprofile-jobSeekerReviews-rating'> {props.homeRating}</div>
+      <p className='companyprofile-jobSeekerReviews-desc'>"{props.subtitle}</p>
     </div>  
   </div>
 );
 
-const SeekerReviewsContainer = (props) => (
-  <div className="companyprofile-seekerReviews-container">
+const JobSeekerReviewsContainer = (props) => (
+  <div className="companyprofile-jobSeekerReviews-container">
     {
       props.reviews.map((review) => (
-        <SeekerReviews title={ review.title }
+        <JobSeekerReviews title={ review.title }
           personalDes={ review.personalDes }
           imgUrl={ review.imgUrl }
           timeText = {review.timeText} 
@@ -95,8 +95,8 @@ function CompanyProfile() {
       // Don't show if it's the company's own profile
       if (isOwnProfile) return false;
       
-      // Only show if the viewer is a seeker
-      return currentUserType === 'seeker';
+      // Only show if the viewer is a jobSeeker
+      return currentUserType === 'jobSeeker';
     };
 
 
@@ -104,7 +104,7 @@ function CompanyProfile() {
   if (error) return <div>Error: {error}</div>;
   if (!company) return <div>No company data found</div>;
 
-  const seekerReviews = [
+  const jobSeekerReviews = [
     {id: 1, homeRating:<ReadOnlyRating/>, title: 'Serenity Stone',subtitle:`“I’ve always struggled with budgeting, but the financial Company I connected with made everything so simple. I feel confident in managing my money now`, imgUrl: 'https://unsplash.it/200/200'},
     {id: 2, homeRating:<ReadOnlyRating/>, title: 'Michel Jackson',subtitle:`“I’ve always struggled with budgeting, but the financial Company I connected with made everything so simple. I feel confident in managing my money now`, imgUrl: 'https://unsplash.it/201/200'},
     {id: 3, homeRating:<ReadOnlyRating/>, title: 'Serenity Stone',subtitle:`“I’ve always struggled with budgeting, but the financial Company I connected with made everything so simple. I feel confident in managing my money now`, imgUrl: 'https://unsplash.it/200/201'},
@@ -163,7 +163,7 @@ function CompanyProfile() {
               {shouldShowMessageButton() && (
                 <button 
                   className='companyprofile-messagingbutton' 
-                  onClick={() => navigate('/seeker-middle-chat')}
+                  onClick={() => navigate('/jobSeeker-middle-chat')}
                 >
                   Start Messaging
                 </button>
@@ -178,8 +178,8 @@ function CompanyProfile() {
           </div>
           
           <div className='companyprofile-rightcontainer-bottom'>
-            <div className='companyprofile-seeker-rewiews-content'>
-              <SeekerReviewsContainer reviews={seekerReviews} />
+            <div className='companyprofile-jobSeeker-rewiews-content'>
+              <JobSeekerReviewsContainer reviews={jobSeekerReviews} />
             </div>
           </div>
         </div>

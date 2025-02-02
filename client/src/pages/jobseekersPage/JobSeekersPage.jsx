@@ -1,11 +1,11 @@
 import React from 'react';
-import Seekers from '../../components/seekers/Seekers';
+import JobSeekers from '../../components/jobseekers/JobSeekers';
 
 
 function SeekersPage() {
   return (
     <div>
-        <Seekers />
+        <JobSeekers />
     </div>
   )
 }

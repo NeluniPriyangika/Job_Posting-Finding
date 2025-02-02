@@ -4,7 +4,7 @@ import './comanyPublicChat.css';
 import Navbar2 from '../navbar2/Navbar2'
 import CompanySideBar from '../comanySideBar/ComanySideBar';
 import Footer from '../footer/Footer';
-import Seeker1 from '../../assets/seeker1.png';
+import JobSeeker1 from '../../assets/jobseeker1.png';
 import io from 'socket.io-client';
 import { MessageBox } from 'react-chat-elements';
 import 'react-chat-elements/dist/main.css';
@@ -110,10 +110,10 @@ function CompanyPublicChat() {
           <h3>Public Chat</h3>
           <div className="chat-window">
             {messages.map((message, index) => (
-              <div key={index} className={`chat-message ${message.isCompany ? 'company-message' : 'seeker-message'}`}>
+              <div key={index} className={`chat-message ${message.isCompany ? 'company-message' : 'jobSeeker-message'}`}>
                 {message.isCompany && (
                   <div className="company-info">
-                    <img src={Seeker1} alt="Company" className="company-pic" />
+                    <img src={JobSeeker1} alt="Company" className="company-pic" />
                     <span className="company-name">Company</span>
                   </div>
                 )}

@@ -1,10 +1,10 @@
 import React from 'react'
-import SeekerProfile from '../../components/seekerProfile/SeekerProfile'
+import JobSeekerProfile from '../../components/jobseekerProfile/JobSeekerProfile'
 
 function SeekerProfilePage() {
   return (
     <div>
-      <SeekerProfile />
+      <JobSeekerProfile />
     </div>
   )
 }

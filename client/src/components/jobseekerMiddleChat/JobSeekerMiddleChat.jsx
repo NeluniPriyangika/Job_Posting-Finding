@@ -1,9 +1,9 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom';
-import './seekerMiddleChat.css';
+import './jobseekerMiddleChat.css';
 import Navbar2 from '../navbar2/Navbar2';
 import Footer from '../footer/Footer';
-import SeekerSideBar from '../seekerSideBar/SeekerSideBar';
+import SeekerSideBar from '../jobseekerSideBar/JobSeekerSideBar';
 import Company1 from '../../assets/Company1.jpg';
 
 

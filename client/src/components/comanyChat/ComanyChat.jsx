@@ -4,7 +4,7 @@ import './comanyChat.css';
 import Navbar2 from '../navbar2/Navbar2';
 import CompanySideBar from '../comanySideBar/ComanySideBar';
 import Footer from '../footer/Footer';
-import Seeker1 from '../../assets/seeker1.png';
+import JobSeeker1 from '../../assets/jobseeker1.png';
 import io from 'socket.io-client';
 import { MessageBox } from 'react-chat-elements';
 import 'react-chat-elements/dist/main.css';
@@ -14,7 +14,7 @@ const SOCKET_URL = 'http://localhost:5000';
 const API_URL = 'http://localhost:5000/api';
 
 // Custom hook for chat session management
-const useChatSession = (userId, seekerId) => {
+const useChatSession = (userId, jobSeekerId) => {
   const [session, setSession] = useState(null);
   const [error, setError] = useState(null);
 
@@ -22,7 +22,7 @@ const useChatSession = (userId, seekerId) => {
     try {
       const response = await axios.post(`${API_URL}/chat/session/initialize`, {
         companyId: userId,
-        seekerId
+        jobSeekerId
       });
       setSession(response.data);
       return response.data;
@@ -33,7 +33,7 @@ const useChatSession = (userId, seekerId) => {
         setError('Failed to initialize chat session');
       }
     }
-  }, [userId, seekerId]);
+  }, [userId, jobSeekerId]);
 
   const endSession = useCallback(async (sessionId) => {
     try {
@@ -128,9 +128,9 @@ function CompanyChat() {
   }, []);
 
   // Initialize chat session
-  const seekerId = sessionStorage.getItem('currentSeekerId');
+  const jobSeekerId = sessionStorage.getItem('currentJobSeekerId');
   const { session, error: sessionError, initializeSession, endSession } = 
-    useChatSession(currentUser?.userId, seekerId);
+    useChatSession(currentUser?.userId, jobSeekerId);
 
   // Handle messages
   const { messages, setMessages, sendMessage, error: messageError } = 
@@ -201,7 +201,7 @@ function CompanyChat() {
             <div className="CompanyChat-Middlecontainer-top1">
               <img 
                 className="CompanyChat-Middlecontainer-proPick" 
-                src={currentUser.profilePhotoUrl || Seeker1} 
+                src={currentUser.profilePhotoUrl || JobSeeker1} 
                 alt="Company" 
               />
               <h2>{currentUser.name}</h2>
@@ -259,12 +259,12 @@ function CompanyChat() {
               <div key={index} className="CompanyChat-chat-history">
                 <div className="CompanyChat-chat-history-content1">
                   <img 
-                    src={session.seeker.profilePhotoUrl || Seeker1} 
-                    alt={session.seeker.name} 
+                    src={session.jobSeeker.profilePhotoUrl || JobSeeker1} 
+                    alt={session.jobSeeker.name} 
                   />
                 </div>
                 <div className="CompanyChat-chat-history-content2">
-                  <h6>{session.seeker.name}</h6>
+                  <h6>{session.jobSeeker.name}</h6>
                   <p className="CompanyChat-chat-history-desc">
                     Status: {session.status}
                   </p>

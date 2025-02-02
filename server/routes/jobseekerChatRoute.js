@@ -4,7 +4,7 @@ const { SeekerMessage, SeekerChatSession } = require('../models/seekerChatModel'
 const User = require('../models/user');
 
 // Get seeker by ID
-router.get('/seeker/:userId', async (req, res) => {
+router.get('/jobseeker/:userId', async (req, res) => {
   try {
     const { userId } = req.params;
     

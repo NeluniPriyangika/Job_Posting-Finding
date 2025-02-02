@@ -146,13 +146,13 @@ const CompanyUpdateProfile = () => {
           <h2 className='company-profile-update-tipstobuildprofile-tittle'>Tips to build a good profile</h2>
           <ul className='company-profile-update-tipstobuildprofile-list'>
             <li className='company-profile-update-tipstobuildprofile-list-item'>Professional Profile Picture: Use a clear, high-quality headshot that reflects your professionalism.</li>
-            <li className='company-profile-update-tipstobuildprofile-list-item'>Compelling Bio: Write a brief, engaging bio that highlights your expertise and how you can help Seeker.</li>
+            <li className='company-profile-update-tipstobuildprofile-list-item'>Compelling Bio: Write a brief, engaging bio that highlights your expertise and how you can help JobSeeker.</li>
             <li className='company-profile-update-tipstobuildprofile-list-item'>Relevant Expertise: Select categories that best represent your skills—focus on what you excel at.</li>
             <li className='company-profile-update-tipstobuildprofile-list-item'>Competitive Rate: Research other Companys' rates and set a price that reflects your experience.</li>
             <li className='company-profile-update-tipstobuildprofile-list-item'>Show Experience: Highlight certifications, qualifications, and years of experience.</li>
             <li className='company-profile-update-tipstobuildprofile-list-item'>Update Availability: Keep your schedule current to attract more consultations</li>
             <li className='company-profile-update-tipstobuildprofile-list-item'>Use Keywords: Add relevant keywords naturally to increase profile visibilit</li>
-            <li className='company-profile-update-tipstobuildprofile-list-item'>Transparency: Clearly explain what Seekers can expect from your advic</li>
+            <li className='company-profile-update-tipstobuildprofile-list-item'>Transparency: Clearly explain what JobSeekers can expect from your advic</li>
             <li className='company-profile-update-tipstobuildprofile-list-item'>Unique Selling Point: Highlight what makes you stand out—your experience, method, or results.</li>
             <li className='company-profile-update-tipstobuildprofile-list-item'>Stay Updated: Regularly refresh your profile with new achievements and experiences.</li>
           </ul>
@@ -384,7 +384,7 @@ const CompanyUpdateProfile = () => {
             </li>
             <li className='company-profile-update-advantagesasCompany-tittle-list-item'>
               <h5>Build Your Reputation</h5>
-              <p>Showcase your expertise, gain reviews from satisfied Seekers, and grow your credibility in your field. </p>
+              <p>Showcase your expertise, gain reviews from satisfied JobSeekers, and grow your credibility in your field. </p>
             </li>
             <li className='company-profile-update-advantagesasCompany-tittle-list-item'>
               <h5>Expand Your Network</h5>
@@ -392,7 +392,7 @@ const CompanyUpdateProfile = () => {
             </li>
             <li className='company-profile-update-advantagesasCompany-tittle-list-item'>
               <h5>Help Others</h5>
-              <p>Use your knowledge and experience to guide Seekers through challenges and help them achieve their goals.  </p>
+              <p>Use your knowledge and experience to guide JobSeekers through challenges and help them achieve their goals.  </p>
             </li>
             <li className='company-profile-update-advantagesasCompany-tittle-list-item'>
               <h5>Grow Professionally</h5>
